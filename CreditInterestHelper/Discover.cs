@@ -1,17 +1,17 @@
 ﻿using System;
 namespace CreditInterestHelper
 {
-    public class Visa : ICreditCard
+    public class Discover : ICreditCard
     {
-        public decimal InterestRate { get; set; } = 0.1m;
+        public decimal InterestRate { get; set; } = 0.01m;
         public decimal Balance { get; set; }
 
-        public Visa(decimal amount)
+        public Discover(decimal amount)
         {
             Balance = amount;
         }
 
-        public Visa(decimal interestRate, decimal amount)
+        public Discover(decimal interestRate, decimal amount)
         {
             Balance = amount;
             InterestRate = interestRate;
