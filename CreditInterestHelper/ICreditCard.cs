@@ -26,7 +26,8 @@ namespace CreditInterestHelper
         /// </summary>
         /// <returns>The interest.</returns>
         /// <param name="amount">
-        /// Amount to run <see cref="InterestRate"/> against
+        /// Amount to run <see cref="InterestRate"/> against.
+        /// If Balance is Zero or less returns Zero.
         /// </param>
         decimal CalculateInterest();
 

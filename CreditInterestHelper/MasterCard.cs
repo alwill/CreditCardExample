@@ -15,10 +15,9 @@ namespace CreditInterestHelper
 
         public decimal CalculateInterest() 
         {
-            if (Balance < 0) 
+            if (Balance <= 0) 
             {
-                throw new ArgumentOutOfRangeException(
-                    "Can't calculate interest on negative balance");
+                return 0;
             }
             return Balance * InterestRate;
         }
