@@ -9,17 +9,17 @@ namespace CreditInterestHelperTests
         [Fact]
         public void CalculateInterest_ValidBalanceAndInterest_ReturnsInterest()
         {
-            ICreditCard masterCard = new MasterCard(0.1m, 100);
+            ICreditCard masterCard = new MasterCard(100);
 
             decimal interestOnCard = masterCard.CalculateInterest();
 
-            Assert.Equal(10, interestOnCard);
+            Assert.Equal(5, interestOnCard);
         }
 
         [Fact]
         public void CalculateInterest_NegativeBalance_ReturnsZero() 
         {
-            ICreditCard masterCard = new MasterCard(0.1m, -100);
+            ICreditCard masterCard = new MasterCard(-100);
 
             decimal interestOnCard = masterCard.CalculateInterest();
 
