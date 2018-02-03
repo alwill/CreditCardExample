@@ -13,7 +13,7 @@ namespace CreditInterestHelper
             Wallets = wallets;
         }
 
-        public decimal RetrieveInterestForWallets()
+        public decimal RetrieveInterestForPerson()
         {
             decimal totalInterest = 0;
 

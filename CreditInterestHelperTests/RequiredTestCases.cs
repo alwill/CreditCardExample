@@ -15,7 +15,7 @@ namespace CreditInterestHelperTests
             IWallet wallet = new Wallet(discoverCard, masterCard, visaCard);
             IPerson person = new Person(wallet);
 
-            decimal totalInterestForPerson = person.RetrieveInterestForWallets();
+            decimal totalInterestForPerson = person.RetrieveInterestForPerson();
 
             Assert.Equal(16, totalInterestForPerson);
         }
@@ -30,7 +30,7 @@ namespace CreditInterestHelperTests
             IWallet wallet2 = new Wallet(masterCard);
             IPerson person = new Person(wallet, wallet2);
 
-            decimal totalInterestForPerson = person.RetrieveInterestForWallets();
+            decimal totalInterestForPerson = person.RetrieveInterestForPerson();
 
             Assert.Equal(16, totalInterestForPerson);
         }
@@ -48,8 +48,8 @@ namespace CreditInterestHelperTests
             IPerson person = new Person(wallet);
             IPerson person2 = new Person(wallet2);
 
-            decimal totalInterestForPersons = person.RetrieveInterestForWallets();
-            totalInterestForPersons += person2.RetrieveInterestForWallets();
+            decimal totalInterestForPersons = person.RetrieveInterestForPerson();
+            totalInterestForPersons += person2.RetrieveInterestForPerson();
 
             Assert.Equal(31, totalInterestForPersons);
         }
