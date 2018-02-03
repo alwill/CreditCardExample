@@ -28,5 +28,15 @@ namespace CreditInterestHelperTests
 
             Assert.Equal(30, totalInterest);
         }
+
+        [Fact]
+        public void RetrieveInterestForWallet_NoCreditCard_ReturnsZero()
+        {
+            IWallet wallet = new Wallet();
+
+            decimal totalInterest = wallet.RetrieveInterestForWallet();
+
+            Assert.Equal(0, totalInterest);
+        }
     }
 }
