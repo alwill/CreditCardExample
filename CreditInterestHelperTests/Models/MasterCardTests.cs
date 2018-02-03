@@ -11,7 +11,7 @@ namespace CreditInterestHelperTests
         {
             ICreditCard masterCard = new MasterCard(100);
 
-            decimal interestOnCard = masterCard.CalculateInterest();
+            decimal interestOnCard = masterCard.CalculateSimpleInterest();
 
             Assert.Equal(5, interestOnCard);
         }
@@ -21,7 +21,7 @@ namespace CreditInterestHelperTests
         {
             ICreditCard masterCard = new MasterCard(-100);
 
-            decimal interestOnCard = masterCard.CalculateInterest();
+            decimal interestOnCard = masterCard.CalculateSimpleInterest();
 
             Assert.Equal(0, interestOnCard);
         }

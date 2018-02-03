@@ -19,7 +19,7 @@ namespace CreditInterestHelper
 
             CreditCards.ToList().ForEach(card =>
             {
-                totalInterest += card.CalculateInterest();
+                totalInterest += card.CalculateSimpleInterest();
             });
 
             return totalInterest;

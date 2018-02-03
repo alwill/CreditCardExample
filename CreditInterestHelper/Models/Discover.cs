@@ -16,14 +16,5 @@ namespace CreditInterestHelper
             Balance = amount;
             InterestRate = interestRate;
         }
-
-        public decimal CalculateInterest()
-        {
-            if (Balance <= 0)
-            {
-                return 0;
-            }
-            return Balance * InterestRate;
-        }
     }
 }

@@ -15,4 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CreditInterestHelper\CreditInterestHelper.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
 </Project>
