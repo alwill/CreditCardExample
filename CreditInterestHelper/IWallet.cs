@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace CreditInterestHelper
 {
-    public class IWallet
+    public interface IWallet
     {
-        public IWallet()
-        {
-        }
+        IEnumerable<ICreditCard> CreditCards { get; set; }
+
+        decimal RetrieveInterestForWallet();
     }
 }
